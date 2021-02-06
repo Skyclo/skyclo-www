@@ -26,7 +26,7 @@
             <!-- Todo -->
             <div class="ts absolute w-full h-full bg-fixed bg-cover opacity-10" style="background-image: url('static/img/netvis.gif');"></div>
             <div class="ts flex flex-row mx-auto my-auto max-w-4xl w-full">
-                <div class="ts my-auto">
+                <div class="ts my-auto mr-2">
                     <h6 class="ts enter-fade enter-fade-first text-sm text-gray-100 font-mono text-left">Hey There! My name is</h6>
                     <h1 class="ts enter-fade enter-fade-first mt-2 text-7xl text-accent-500 font-sans font-extrabold text-left tracking-tight">Conor Daly</h1>
                     <p class="ts enter-fade enter-fade-first mt-2 text-lg text-gray-400 font-mono font-semibold text-left">Developer, Entrepreneur, Designer</p>
@@ -50,17 +50,28 @@
         </div>
         <div id="about" class="section ts flex h-screen w-full bg-black">
             <div class="ts flex flex-col mx-auto my-auto max-w-4xl w-full">
-                <div class="ts enter-fade border-2 mx-auto w-max px-12 border-accent-500">
-                    <div class="ts relative top-4 flex flex-col bg-black px-4">
-                        <h6 class="ts enter-fade mx-auto uppercase text-sm text-accent-500 font-mono text-center">Bio</h6>
-                        <h1 class="ts enter-fade mx-auto text-4xl text-gray-100 font-sans font-bold text-center tracking-tight">A Bit About Me</h1>
+                <div class="ts flex flex-row">
+                    <div class="ts mr-8">
+                        <div class="ts enter-fade border-2 mr-auto w-max px-12 border-accent-500">
+                            <div class="ts relative top-5 flex flex-col bg-black px-4">
+                                <h6 class="ts enter-fade mx-auto uppercase text-sm text-accent-500 font-mono text-center">Bio</h6>
+                                <h1 class="ts enter-fade mx-auto text-4xl text-gray-100 font-sans font-bold text-center tracking-tight">A Bit About Me</h1>
+                            </div>
+                        </div>
+                        <p class="ts enter-fade mr-auto mt-8 max-w-prose w-full text-sm text-gray-300 font-mono font-normal text-left">
+                            Hello! I am Conor Daly (aka. Skyclo), a self-taught developer and high school student. When I was eight years old, I discovered my passion for technology. Since then I have learned both front-end and backend languages like HTML, CSS, JavaScript, Python, and SQL. I also have experience with TypeScript, C# and others. I have also created some awesome things like <a href="https://ideoxan.com/" class="ts hover:underline text-accent-500">Ideoxan</a>, <a href="https://npmjs.com/package/node-scdl" class="ts hover:underline text-accent-500">node-scdl</a>, and Calicode.
+                        </p>
+                        <p class="ts enter-fade mr-auto mt-8 max-w-prose w-full text-sm text-gray-300 font-mono font-normal text-left">
+                            Over the years, I have used tools like Adobe Photoshop, Adobe Premiere Pro, Inkscape, Unreal Engine, and Autodesk Maya. Since around 2017, I started to work on logo and UI design. I created redesign concepts for applications like Spotify and Discord. I've also done commission work.
+                        </p>
+                    </div>
+                    <div class="ts enter-fade flex ml-auto max-w-2xl w-full h-96 bg-gray-900">
+                        <p class="ts enter-fade mx-auto my-auto text-gray-700 font-mono font-normal text-center italics">Picture Coming Soon</p>
                     </div>
                 </div>
                 
-                <p class="ts mx-auto mt-2 text-xl text-gray-300 font-sans font-semibold text-center"></p>
             </div>
         </div>
-
 
         <script>
             let fadeFirstElements = document.getElementsByClassName('enter-fade-first')
