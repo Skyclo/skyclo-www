@@ -13,30 +13,48 @@
                 <div class="ts my-auto">
                     <img class="ts w-4" src="static/img/logow.png">
                 </div>
+                <div class="ts ml-auto my-auto">
+                    <a class="ts px-4 text-sm text-white font-mono text-center" href="#home" onclick="fadeInUponScroll('home')">/home</a>
+                    <a class="ts px-4 text-sm text-white font-mono text-center" href="#about" onclick="fadeInUponScroll('about')">/about</a>
+                    <a class="ts px-4 text-sm text-white font-mono text-center" href="#work" onclick="fadeInUponScroll('work')">/work</a>
+                    <a class="ts px-4 text-sm text-white font-mono text-center" href="#contact" onclick="fadeInUponScroll('contact')">/contact</a>
+                </div>
             </div>
             
         </div>
-        <div class="section ts flex mx-auto h-screen w-full bg-black">
+        <div id="home" class="section ts flex mx-auto h-screen w-full bg-black">
             <div class="ts flex flex-row mx-auto my-auto max-w-4xl w-full">
-                <div class="ts mr-auto">
-                    <h6 class="ts enter-fade enter-fade-first text-sm text-accent-300 font-mono text-left">Hello, my name is</h6>
-                    <h1 class="ts enter-fade enter-fade-first mt-2 text-7xl text-gray-100 font-sans font-extrabold text-left tracking-tight">Conor Daly</h1>
-                    <p class="ts enter-fade enter-fade-first mt-2 text-xl text-gray-300 font-sans font-semibold text-left">Developer, Entrepreneur, Designer</p>
+                <div class="ts my-auto">
+                    <h6 class="ts enter-fade enter-fade-first text-sm text-gray-100 font-mono text-left">Hey There! My name is</h6>
+                    <h1 class="ts enter-fade enter-fade-first mt-2 text-7xl text-accent-500 font-sans font-extrabold text-left tracking-tight">Conor Daly</h1>
+                    <p class="ts enter-fade enter-fade-first mt-2 text-lg text-gray-400 font-mono font-semibold text-left">Developer, Entrepreneur, Designer</p>
                 </div>
-                <div class="ts ml-auto">
-                    <div class="ts enter-fade enter-fade-first block w-32 h-32 bg-accent-500 rounded-lg">
-                        <div class="ts enter-fade enter-fade-first relative -left-4 -bottom-4 w-32 h-32 bg-accent-300 rounded-lg">
-
+                <div class="ts ml-auto my-auto flex">
+                    <div class="ts enter-fade enter-fade-first flex flex-row w-full h-full bg-gray-900 rounded-lg">
+                        <div class="ts enter-fade enter-fade-first flex flex-col w-full h-full space-y-1 pl-4 pr-2 py-2 text-xs text-gray-500 font-mono font-normal text-left whitespace-pre-wrap">
+                            <p class="ts"><span class="text-gray-600 italic">// helloWorld.js</span></p>
+                            <p class="ts"><span class="text-purple-500 font-bold">const</span> <span class="text-gray-200">helloWorld</span> <span class="text-yellow-500">=</span> (<span class="text-red-500 font-bold">name</span>) <span class="text-yellow-500">=></span> <span class="text-indigo-500">{</span></p>
+                            <p class="ts">    <span class="text-purple-500 font-bold">let</span> <span class="text-gray-200">strings</span> <span class="text-yellow-500">=</span> [<span class="text-green-500">'Hello'</span>, <span class="text-green-500">'World'</span>]</p>
+                            <p class="ts">    <span class="text-purple-500 font-bold">return</span> <span class="text-green-500">`${name} says "${strings.join(', ')}!"`</span></p>
+                            <p class="ts"><span class="text-indigo-500">}</span></p>
+                            <p class="ts"></p>
+                            <p class="ts"><span class="text-blue-500">helloWorld(<span class="text-green-500">'Conor'</span>)</span></p>
                         </div>
                     </div>
                 </div>
+                
             </div>
             
         </div>
-        <div class="section ts flex mx-auto h-screen w-full max-w-4xl">
-            <div class="ts flex flex-col my-auto w-full">
-                <h6 class="ts enter-fade mx-auto uppercase text-sm text-accent-300 font-mono text-center">Bio</h6>
-                <h1 class="ts enter-fade mx-auto mt-2 text-5xl text-gray-100 font-sans font-extrabold text-center tracking-tight">A Bit About Me</h1>
+        <div id="about" class="section ts flex h-screen w-full bg-black">
+            <div class="ts flex flex-col mx-auto my-auto max-w-4xl w-full">
+                <div class="ts enter-fade border-2 mx-auto w-max px-12 border-accent-500">
+                    <div class="ts relative top-4 flex flex-col bg-black px-4">
+                        <h6 class="ts enter-fade mx-auto uppercase text-sm text-accent-500 font-mono text-center">Bio</h6>
+                        <h1 class="ts enter-fade mx-auto text-4xl text-gray-100 font-sans font-bold text-center tracking-tight">A Bit About Me</h1>
+                    </div>
+                </div>
+                
                 <p class="ts mx-auto mt-2 text-xl text-gray-300 font-sans font-semibold text-center"></p>
             </div>
         </div>
@@ -76,13 +94,12 @@
 
 
             function fadeInUponScroll(elem) {
+                if (typeof elem == 'string') elem = document.getElementById(elem)
                 let fadeElements = elem.querySelectorAll('.enter-fade') || null
-                console.log(fadeElements.length)
                 if (fadeElements) for (let i = 0; i < fadeElements.length; i++) {
                     setTimeout(()=> {
                         fadeElements[i].classList.add('enter-fade-done')
                         fadeElements[i].classList.remove('enter-fade')
-                        console.log(fadeElements[i])
                     }, 400)
                 }
             }
