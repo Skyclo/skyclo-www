@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="ts ">
+<html lang="en" class="ts " style="scroll-behavior: smooth">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,17 @@
 
         <link rel="stylesheet" href="static/css/styles.css">
     </head>
-    <body class="ts bg-gray-900 w-full h-full overflow-x-hidden overflow-y-auto">
-        <div class="ts flex mx-auto h-screen w-full max-w-4xl">
-            <div class="ts flex flex-row my-auto w-full">
+    <body class="ts bg-gray-900 w-full h-full overflow-x-hidden overflow-y-visible">
+        <div class="ts fixed flex flex-row w-full">
+            <div class="ts flex flex-row w-full mx-8 py-4">
+                <div class="ts my-auto">
+                    <img class="ts w-4" src="static/img/logow.png">
+                </div>
+            </div>
+            
+        </div>
+        <div class="section ts flex mx-auto h-screen w-full bg-black">
+            <div class="ts flex flex-row mx-auto my-auto max-w-4xl w-full">
                 <div class="ts mr-auto">
                     <h6 class="ts enter-fade enter-fade-first text-sm text-green-300 font-mono text-left">Hello, my name is</h6>
                     <h1 class="ts enter-fade enter-fade-first mt-2 text-7xl text-gray-100 font-sans font-extrabold text-left tracking-tight">Conor Daly</h1>
@@ -25,7 +33,7 @@
             </div>
             
         </div>
-        <div class="ts flex mx-auto h-screen w-full max-w-4xl">
+        <div class="section ts flex mx-auto h-screen w-full max-w-4xl">
             <div class="ts flex flex-col my-auto w-full">
                 <h6 class="ts enter-fade mx-auto uppercase text-sm text-green-300 font-mono text-center">Bio</h6>
                 <h1 class="ts enter-fade mx-auto mt-2 text-5xl text-gray-100 font-sans font-extrabold text-center tracking-tight">A Bit About Me</h1>
@@ -41,17 +49,41 @@
                 fadeFirstElements[i].classList.remove('enter-fade')
             }
 
-            window.addEventListener('scroll', fadeInUponScroll)
+            let s = 0
+            let lastScrollPos = 0
+            let sections = document.getElementsByClassName('section')
+            sections[s].scrollIntoView()
+            window.addEventListener('wheel', (event) => {
+                let direction = -event.deltaY
 
-            function fadeInUponScroll() {
-                let fadeElements = document.getElementsByClassName('enter-fade')
-                for (let i = 0; i < fadeElements.length; i++) {
-                    let pos = fadeElements[i].getBoundingClientRect()
-                    console.log((document.documentElement.clientHeight/2) - (pos.top/2))
-                    if (document.documentElement.clientHeight - (pos.top+(screen.availHeight/2)-100) > 0 && pos.top + pos.height > 0) {
+                if (direction < 0) {
+                    if (s+1 >= sections.length) return
+                    if (sections[s].getBoundingClientRect().bottom > screen.availHeight) return
+                    s++
+                    
+                } else {
+                    if (s-1 < 0) return
+                    if (sections[s].getBoundingClientRect().top < 0) return
+                    s--
+                }
+
+                event.preventDefault()
+                sections[s].scrollIntoView({behavior: 'smooth'})
+
+                fadeInUponScroll(sections[s])
+
+            }, {passive: false})
+
+
+            function fadeInUponScroll(elem) {
+                let fadeElements = elem.querySelectorAll('.enter-fade') || null
+                console.log(fadeElements.length)
+                if (fadeElements) for (let i = 0; i < fadeElements.length; i++) {
+                    setTimeout(()=> {
                         fadeElements[i].classList.add('enter-fade-done')
                         fadeElements[i].classList.remove('enter-fade')
-                    }
+                        console.log(fadeElements[i])
+                    }, 400)
                 }
             }
         </script>
