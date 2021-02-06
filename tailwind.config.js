@@ -14,7 +14,7 @@ let tailwindConfig = {
     },
     extend: {
       colors: {
-        accent: colors.emerald
+        accent: colors.indigo
       }
     },
   },
