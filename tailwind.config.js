@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 let tailwindConfig = {
   purge: [
     './static/**/*.js',
@@ -10,11 +12,13 @@ let tailwindConfig = {
       'serif': ['Georgia', 'Cambria', '"Times\\ New\\ Roman"', 'Times', 'serif'],
       'mono': ['Cascadia Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation\ Mono"', '"Courier\ New"', 'monospace']
     },
-    extend: {},
+    extend: {
+      colors: {
+        accent: colors.emerald
+      }
+    },
   },
-  variants: {
-    extend: {},
-  },
+  variants: {},
   plugins: [],
 }
 
