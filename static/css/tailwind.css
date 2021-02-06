@@ -31,3 +31,21 @@
     font-family: 'Cascadia Mono';
     src: url('../fonts/CascadiaMono.woff2') format('woff2');
 }
+
+@layer base {
+    .ts {
+        @apply transition duration-300 ease-in-out;
+    }
+
+    .enter-fade {
+        @apply ts;
+        opacity: 0.01;
+        transform: translateY(18px);
+    }
+
+    .enter-fade-done {
+        @apply ts;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
