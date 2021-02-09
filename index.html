@@ -6,6 +6,8 @@
         <title>Welcome</title>
 
         <link rel="stylesheet" href="static/css/styles.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     </head>
     <body class="ts bg-gray-900 w-full h-full overflow-x-hidden overflow-y-visible">
         <div class="ts fixed z-40 flex flex-row w-full">
@@ -81,11 +83,77 @@
                         <h1 class="ts enter-fade mx-auto text-4xl text-gray-100 font-sans font-bold text-center tracking-tight">My Work</h1>
                     </div>
                 </div>
-                
+                <div class="ts flex flex-row w-full mt-12 mb-6">
+                    <div class="ts enter-fade flex-grow h-px my-auto bg-gray-500"></div>
+                    <h4 class="ts enter-fade mx-4 uppercase text-base text-gray-500 font-mono text-center">Programming</h4>
+                    <div class="ts enter-fade flex-grow h-px my-auto bg-gray-500"></div>
+                </div>
+                <div class="ts enter-fade grid grid-cols-3 gap-x-4 gap-y-6 w-full">
+                    <div class="ts enter-fade w-full h-full px-4 py-6 bg-gray-900 rounded-lg ">
+                        <h3 class="ts text-xl text-gray-50 font-sans font-semibold text-left">Ideoxan</h3>
+                        <p class="ts mt-1 mb-3 text-sm text-gray-400 font-mono font-normal text-left">👩‍💻 Ideoxan is a free to use online tool to learn programming</p>
+                        <div class='ts flex flex-row space-x-4 mt-auto'>
+                            <a href="https://ideoxan.com/"><i data-feather="globe" class="ts w-4 h-4 text-gray-600 hover:text-gray-400"></i></a>
+                            <a href="https://github.com/ideoxan"><i data-feather="github" class="ts w-4 h-4 text-gray-600 hover:text-gray-400"></i></a>
+                        </div>
+                    </div>
+                    <div class="ts enter-fade w-full h-full px-4 py-6 bg-gray-900 rounded-lg ">
+                        <h3 class="ts text-xl text-gray-50 font-sans font-semibold text-left">node-scdl</h3>
+                        <p class="ts mt-1 mb-3 text-sm text-gray-400 font-mono font-normal text-left">🎵 An easy to use, minimal dependency Soundcloud song downloader</p>
+                        <div class='ts flex flex-row space-x-4 mt-auto'>
+                            <a href="https://github.com/skyclo/node-scdl"><i data-feather="github" class="ts w-4 h-4 text-gray-600 hover:text-gray-400"></i></a>
+                        </div>
+                    </div>
+                    <div class="ts enter-fade w-full h-full px-4 py-6 bg-gray-900 rounded-lg ">
+                        <h3 class="ts text-xl text-gray-50 font-sans font-semibold text-left">expest</h3>
+                        <p class="ts mt-1 mb-3 text-sm text-gray-400 font-mono font-normal text-left">An Express/HTTP Server oriented Node.js testing framework </p>
+                        <div class='ts flex flex-row space-x-4 mt-auto'>
+                            <a href="https://github.com/skyclo/expest"><i data-feather="github" class="ts w-4 h-4 text-gray-600 hover:text-gray-400"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="work" class="section ts flex h-screen w-full bg-black">
+            <div class="ts flex flex-col mx-auto my-auto max-w-4xl w-full">
+                <div class="ts flex flex-row w-full mt-12 mb-6">
+                    <div class="ts enter-fade flex-grow h-px my-auto bg-gray-500"></div>
+                    <h4 class="ts enter-fade mx-4 uppercase text-base text-gray-500 font-mono text-center">Artwork</h4>
+                    <div class="ts enter-fade flex-grow h-px my-auto bg-gray-500"></div>
+                </div>
+                <div class="ts enter-fade grid grid-cols-3 gap-x-4 gap-y-6 w-full">
+                    <div class="ts enter-fade w-full h-full px-4 py-6 bg-gray-900 rounded-lg ">
+                        <h3 class="ts text-xl text-gray-50 font-sans font-semibold text-left">New Kerbin</h3>
+                        <a href="static/img/works/new_kerbin.png"><img class='ts w-full h-auto mt-2' src="static/img/works/new_kerbin.png"></a>
+                        <p class="ts mt-3 text-sm text-gray-600 font-mono font-normal text-left">720 x 576px</p>
+                        <p class="ts mb-1 text-sm text-gray-600 font-mono font-normal text-left">Digital Painting</p>
+                    </div>
+                    <div class="ts enter-fade w-full h-full px-4 py-6 bg-gray-900 rounded-lg ">
+                        <h3 class="ts text-xl text-gray-50 font-sans font-semibold text-left">Late Night Drive Thru</h3>
+                        <a href="static/img/works/series_late_night_drive_thru.png"><img class='ts w-full h-full mt-2' src="static/img/works/series_late_night_drive_thru.png" style="height: 204px;"></a>
+                        <p class="ts mt-3 text-sm text-gray-600 font-mono font-normal text-left">576 x 720px</p>
+                        <p class="ts mb-1 text-sm text-gray-600 font-mono font-normal text-left">Digital Painting</p>
+                    </div>
+                    <div class="ts enter-fade w-full h-full px-4 py-6 bg-gray-900 rounded-lg ">
+                        <h3 class="ts text-xl text-gray-50 font-sans font-semibold text-left">A New Dawn</h3>
+                        <a href="static/img/works/series_a_new_dawn.png"><img class='ts w-full h-auto mt-2' src="static/img/works/series_a_new_dawn.png"></a>
+                        <p class="ts mt-3 text-sm text-gray-600 font-mono font-normal text-left">3000 x 2400px</p>
+                        <p class="ts mb-1 text-sm text-gray-600 font-mono font-normal text-left">Digital Painting</p>
+                    </div>
+                    <div class="ts enter-fade w-full h-full px-4 py-6 bg-gray-900 rounded-lg ">
+                        <h3 class="ts text-xl text-gray-50 font-sans font-semibold text-left">The Lone Survivor</h3>
+                        <a href="static/img/works/the_lone_survivor.png"><img class='ts w-full h-auto mt-2' src="static/img/works/the_lone_survivor.png"></a>
+                        <p class="ts mt-3 text-sm text-gray-600 font-mono font-normal text-left">3000 x 2400px</p>
+                        <p class="ts mb-1 text-sm text-gray-600 font-mono font-normal text-left">Digital Painting</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <script>
+            feather.replace()
+
+            
             let fadeFirstElements = document.getElementsByClassName('enter-fade-first')
             for (let i = 0; i < fadeFirstElements.length; i++) {
                 fadeFirstElements[i].classList.add('enter-fade-done')
@@ -95,7 +163,7 @@
             let s = 0
             let lastScrollPos = 0
             let sections = document.getElementsByClassName('section')
-            sections[s].scrollIntoView()
+            /* sections[s].scrollIntoView() */
             window.addEventListener('wheel', (event) => {
                 let direction = -event.deltaY
 
